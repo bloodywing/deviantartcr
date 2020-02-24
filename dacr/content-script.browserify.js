@@ -12,7 +12,7 @@ let enableContextMenuItem = function() {
 let disableContextMenuItem = function() {
     browser.runtime.sendMessage({
         "message": {
-            'enabled': true
+            'enabled': false
         }
     });
 };
@@ -20,14 +20,15 @@ let disableContextMenuItem = function() {
 document.addEventListener('contextmenu', event => {
     if(event.target.href && event.target.href.match(deviationmatch)) {
         enableContextMenuItem();
+        return;
     } else {
         disableContextMenuItem();
     }
 
-    if(!event.target.baseURI.match(deviationmatch)) {
-        disableContextMenuItem();
-    } else {
+    if(event.target.baseURI.match(deviationmatch)) {
         enableContextMenuItem();
+    } else {
+        disableContextMenuItem();
     }
 }, {
     capture: true
