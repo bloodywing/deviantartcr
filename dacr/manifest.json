@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "DeviantArt CR Thingy",
+  "description": "Does DeviantArt CR Things",
+  "version": "1.1",
+  "author": "bloodywing <Pierre Geier>",
+
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.deviantart.com/*"],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "deviantart-brands.png",
+    "48": "deviantart-brands.png",
+    "96": "deviantart-brands.png",
+    "128": "deviantart-brands.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://example.com/updates.json"
+    }
+  }
+}
