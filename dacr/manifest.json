@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "DeviantArt CR Thingy",
   "description": "Does DeviantArt CR Things",
-  "version": "1.1",
+  "version": "1.2",
   "author": "bloodywing <Pierre Geier>",
 
   "permissions": [
@@ -32,7 +32,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "update_url": "https://example.com/updates.json"
+      "update_url": "https://raw.githubusercontent.com/bloodywing/deviantartcr/master/update.json"
     }
   }
 }
