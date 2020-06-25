@@ -21,13 +21,13 @@ browser.runtime.onMessage.addListener(function (message) {
     }
 });
 
-browser.contextMenus.onShown.addListener(
+/*browser.contextMenus.onShown.addListener(
     function (info, tab) {
         if(!tab.url.match(/deviantart.com/) && (info.linkUrl ? info.linkUrl : info.pageUrl).match(deviationmatch)) {
             browser.contextMenus.remove("open-on-dd-add");
         }
     }
-);
+);*/
 
 browser.contextMenus.onClicked.addListener(
     function(info, tab) {

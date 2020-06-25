@@ -1,4 +1,4 @@
-let browser = require('webextension-polyfill');
+const browser = require('webextension-polyfill');
 const deviationmatch = new RegExp("deviantart.com\/.*\/art\/.*");
 
 let enableContextMenuItem = function() {
