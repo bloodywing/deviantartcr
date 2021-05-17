@@ -3,7 +3,7 @@
   "dependencies": {
     "browserify": "^16.2.3",
     "firefox-webext-types": "^1.0.0",
-    "web-ext": "^2.9.3",
+    "web-ext": "^6.1.0",
     "webextension-polyfill": "^0.8.0"
   },
   "devDependencies": {}
